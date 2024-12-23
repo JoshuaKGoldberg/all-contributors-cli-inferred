@@ -111,11 +111,45 @@ describe("cli", () => {
 		);
 	});
 
-	it("deletes .all-contributorsrc when it did not already exist", async () => {
+	it("deletes .all-contributorsrc when it did not already exist and all-contributors-cli exits with code zero", async () => {
 		mockFiles = {};
 
-		await cli(argv);
+		const exitCode = 0;
 
+		mockSpawn.mockReturnValueOnce({
+			on: (_event: "close", callback: (code: number) => void) => {
+				callback(exitCode);
+			},
+		});
+
+		const actual = await cli(argv);
+
+		expect(actual).toBe(exitCode);
+		expect(mockRm).toHaveBeenCalledWith(".all-contributorsrc");
+		expect(mockWriteFile).toHaveBeenCalledWith(
+			".all-contributorsrc",
+			JSON.stringify(
+				{ fakeOptions: { packageJson: {}, readmeMd: "" } },
+				null,
+				4,
+			),
+		);
+	});
+
+	it("deletes .all-contributorsrc when it did not already exist and all-contributors-cli exists with a non-zero code", async () => {
+		mockFiles = {};
+
+		const exitCode = 2;
+
+		mockSpawn.mockReturnValueOnce({
+			on: (_event: "close", callback: (code: number) => void) => {
+				callback(exitCode);
+			},
+		});
+
+		const actual = await cli(argv);
+
+		expect(actual).toBe(exitCode);
 		expect(mockRm).toHaveBeenCalledWith(".all-contributorsrc");
 		expect(mockWriteFile).toHaveBeenCalledWith(
 			".all-contributorsrc",
