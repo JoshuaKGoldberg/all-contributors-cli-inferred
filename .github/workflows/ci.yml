@@ -1,0 +1,133 @@
+jobs:
+  are_the_types_wrong:
+    name: Are The Types Wrong?
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm build
+      - run: npx --yes @arethetypeswrong/cli --pack . --ignore-rules cjs-resolves-to-esm
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm build
+      - run: node ./lib/index.js
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm build
+      - run: pnpm lint
+  lint_knip:
+    name: Lint Knip
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm lint:knip
+  lint_markdown:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm lint:md
+  lint_packages:
+    name: Lint Packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm lint:packages
+  lint_spelling:
+    name: Lint Spelling
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm lint:spelling
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm format --list-different
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm run test --coverage
+      - env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        if: always()
+        uses: codecov/codecov-action@v3
+        with:
+          flags: unit
+  test_creation_script:
+    name: Test Creation Script
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm run build
+      - run: pnpm run test:create
+      - env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        if: always()
+        uses: codecov/codecov-action@v3
+        with:
+          files: coverage-create/lcov.info
+          flags: create
+  test_initialization_script:
+    name: Test Initialization Script
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm run build
+      - run: pnpm run test:initialize
+      - env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        if: always()
+        uses: codecov/codecov-action@v3
+        with:
+          files: coverage-initialize/lcov.info
+          flags: initialize
+  test_migration_script:
+    name: Test Migration Script
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm run build
+      - run: pnpm run test:migrate
+      - env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        if: always()
+        uses: codecov/codecov-action@v3
+        with:
+          files: coverage-migrate/lcov.info
+          flags: migrate
+  type_check:
+    name: Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+      - run: pnpm tsc
+
+name: CI
+
+on:
+  pull_request: ~
+  push:
+    branches:
+      - main
