@@ -1,6 +1,6 @@
 {
 	"name": "all-contributors-cli-inferred",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Wraps all-contributors-cli by creating the .all-contributorsrc file from inferred settings. 💓",
 	"repository": {
 		"type": "git",
