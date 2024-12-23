@@ -1,7 +1,4 @@
-import {
-	inferAllContributors,
-	InferAllContributorsOptions,
-} from "all-contributors-inferred";
+import { InferAllContributorsOptions } from "all-contributors-inferred";
 import { describe, expect, it, vi } from "vitest";
 
 import { cli } from "./cli.js";

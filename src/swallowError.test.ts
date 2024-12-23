@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 
 import { swallowError } from "./swallowError.js";
 
@@ -11,7 +11,7 @@ describe("swallowError", () => {
 		expect(actual).toBe(data);
 	});
 	it("returns the result when the action rejects", async () => {
-		const actual = await swallowError(() =>
+		const actual = await swallowError<unknown>(() =>
 			Promise.reject(new Error("Oh no!")),
 		);
 
