@@ -29,7 +29,6 @@ export async function cli(argv: string[]) {
 	]);
 
 	const allContributors = {
-		// @ts-expect-error -- type-fest in all-contributors-inferred resolves to 2.x despite package.json resolutions...
 		...inferAllContributors({ packageJson, readmeMd }),
 		...existingOptions,
 	};
