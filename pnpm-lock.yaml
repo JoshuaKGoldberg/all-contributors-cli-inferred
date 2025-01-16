@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  type-fest: 4.31.0
+  type-fest: 4.32.0
 
 importers:
 
@@ -109,8 +109,8 @@ importers:
         specifier: 8.3.5
         version: 8.3.5(jiti@2.4.2)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.6.1)
       type-fest:
-        specifier: 4.31.0
-        version: 4.31.0
+        specifier: 4.32.0
+        version: 4.32.0
       typescript:
         specifier: 5.7.2
         version: 5.7.2
@@ -3495,8 +3495,8 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
-  type-fest@4.31.0:
-    resolution: {integrity: sha512-yCxltHW07Nkhv/1F6wWBr8kz+5BGMfP+RbRSYFnegVb0qV/UMT0G0ElBloPVerqn4M2ZV80Ir1FtCcYv1cT6vQ==}
+  type-fest@4.32.0:
+    resolution: {integrity: sha512-rfgpoi08xagF3JSdtJlCwMq9DGNDE0IMh3Mkpc1wUypg9vPi786AiqeBBKcqvIkq42azsBM85N490fyZjeUftw==}
     engines: {node: '>=16'}
 
   typedarray@0.0.6:
@@ -4789,7 +4789,7 @@ snapshots:
 
   ansi-escapes@4.3.2:
     dependencies:
-      type-fest: 4.31.0
+      type-fest: 4.32.0
 
   ansi-escapes@7.0.0:
     dependencies:
@@ -4845,7 +4845,7 @@ snapshots:
       chalk: 5.4.1
       cli-boxes: 3.0.0
       string-width: 7.2.0
-      type-fest: 4.31.0
+      type-fest: 4.32.0
       widest-line: 5.0.0
       wrap-ansi: 9.0.0
 
@@ -5282,7 +5282,7 @@ snapshots:
 
   dot-prop@9.0.0:
     dependencies:
-      type-fest: 4.31.0
+      type-fest: 4.32.0
 
   eastasianwidth@0.2.0: {}
 
@@ -6542,7 +6542,7 @@ snapshots:
 
   new-github-release-url@2.0.0:
     dependencies:
-      type-fest: 4.31.0
+      type-fest: 4.32.0
 
   node-fetch@2.7.0:
     dependencies:
@@ -6712,7 +6712,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.26.2
       index-to-position: 0.1.2
-      type-fest: 4.31.0
+      type-fest: 4.32.0
 
   parse-ms@4.0.0: {}
 
@@ -6852,14 +6852,14 @@ snapshots:
     dependencies:
       find-up-simple: 1.0.0
       read-pkg: 9.0.1
-      type-fest: 4.31.0
+      type-fest: 4.32.0
 
   read-pkg@9.0.1:
     dependencies:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 6.0.2
       parse-json: 8.1.0
-      type-fest: 4.31.0
+      type-fest: 4.32.0
       unicorn-magic: 0.1.0
 
   readable-stream@3.6.2:
@@ -7289,7 +7289,7 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  type-fest@4.31.0: {}
+  type-fest@4.32.0: {}
 
   typedarray@0.0.6: {}
 
