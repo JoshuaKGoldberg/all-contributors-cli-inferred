@@ -58,8 +58,8 @@ importers:
         specifier: 5.1.0
         version: 5.1.0(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-n:
-        specifier: 17.16.1
-        version: 17.16.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.2)
+        specifier: 17.20.0
+        version: 17.20.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.2)
       eslint-plugin-package-json:
         specifier: 0.26.0
         version: 0.26.0(@types/estree@1.0.8)(eslint@9.29.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0)
@@ -1997,8 +1997,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-n@17.16.1:
-    resolution: {integrity: sha512-/7FVAwjUrix9P5lycnsYRIQRwFo/DZROD+ZXWLpE+/EZWLyuLvyFaRdAPYJSz+nlAdZIZp+LAzlBerQSVYUNFg==}
+  eslint-plugin-n@17.20.0:
+    resolution: {integrity: sha512-IRSoatgB/NQJZG5EeTbv/iAx1byOGdbbyhQrNvWdCfTnmPxUT0ao9/eGOeG7ljD8wJBsxwE8f6tES5Db0FRKEw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.23.0'
@@ -5603,7 +5603,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-n@17.16.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.2):
+  eslint-plugin-n@17.20.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.2):
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.29.0(jiti@2.4.2))
       '@typescript-eslint/utils': 8.35.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.2)
