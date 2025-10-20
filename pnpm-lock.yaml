@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  type-fest: 5.0.0
+  type-fest: 5.1.0
 
 importers:
 
@@ -109,8 +109,8 @@ importers:
         specifier: 8.5.0
         version: 8.5.0(jiti@2.5.1)(postcss@8.4.49)(typescript@5.9.2)(yaml@2.8.1)
       type-fest:
-        specifier: 5.0.0
-        version: 5.0.0
+        specifier: 5.1.0
+        version: 5.1.0
       typescript:
         specifier: 5.9.2
         version: 5.9.2
@@ -3554,8 +3554,8 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
-  type-fest@5.0.0:
-    resolution: {integrity: sha512-GeJop7+u7BYlQ6yQCAY1nBQiRSHR+6OdCEtd8Bwp9a3NK3+fWAVjOaPKJDteB9f6cIJ0wt4IfnScjLG450EpXA==}
+  type-fest@5.1.0:
+    resolution: {integrity: sha512-wQ531tuWvB6oK+pchHIu5lHe5f5wpSCqB8Kf4dWQRbOYc9HTge7JL0G4Qd44bh6QuJCccIzL3bugb8GI0MwHrg==}
     engines: {node: '>=20'}
 
   typedarray@0.0.6:
@@ -4959,7 +4959,7 @@ snapshots:
 
   ansi-escapes@4.3.2:
     dependencies:
-      type-fest: 5.0.0
+      type-fest: 5.1.0
 
   ansi-escapes@7.0.0:
     dependencies:
@@ -6645,7 +6645,7 @@ snapshots:
 
   new-github-release-url@2.0.0:
     dependencies:
-      type-fest: 5.0.0
+      type-fest: 5.1.0
 
   node-fetch-native@1.6.6: {}
 
@@ -6675,7 +6675,7 @@ snapshots:
 
   object-deep-merge@1.0.5:
     dependencies:
-      type-fest: 5.0.0
+      type-fest: 5.1.0
 
   ohash@2.0.11: {}
 
@@ -6827,7 +6827,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.26.2
       index-to-position: 0.1.2
-      type-fest: 5.0.0
+      type-fest: 5.1.0
 
   parse-path@7.0.0:
     dependencies:
@@ -6963,14 +6963,14 @@ snapshots:
     dependencies:
       find-up-simple: 1.0.0
       read-pkg: 9.0.1
-      type-fest: 5.0.0
+      type-fest: 5.1.0
 
   read-pkg@9.0.1:
     dependencies:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 6.0.2
       parse-json: 8.1.0
-      type-fest: 5.0.0
+      type-fest: 5.1.0
       unicorn-magic: 0.1.0
 
   readable-stream@3.6.2:
@@ -7381,7 +7381,7 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  type-fest@5.0.0:
+  type-fest@5.1.0:
     dependencies:
       tagged-tag: 1.0.0
 
